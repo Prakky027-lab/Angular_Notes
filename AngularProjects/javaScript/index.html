@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            Employee management system
+        </title>
+
+        <script src="employee.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <form name="emp" >
+        <table>
+            <tr>
+                <td> Employee id</td>
+                <td><input type="text" id="empid" name="eid" /> </td>
+            </tr>
+
+            <tr>
+                <td> Employee Name</td>
+                <td><input type="text" id="empname" name="ename" /> </td>
+            </tr>
+
+            <tr>
+                <td>Course</td>
+                <td>
+                    <br><input type="checkbox" id="empcourse" name="ecourse" value="java"> java
+                    <input type="checkbox" id="empcourse" name="ecourse" value=".net"> .net<br>
+                    <input type="checkbox" id="empcourse" name="ecourse" value="SalesForces"> SalesForces
+                    <input type="checkbox" id="empcourse" name="ecourse" value="Pera"> Pega
+                </td>
+            </tr>
+
+            <tr>
+                <td>Qualification</td>
+                <td>
+                        <select id="Qualification">
+                                <option value="Select">Select</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BE/BTECH">BE/BTECH</option>
+                                <option value="MCA">MCA</option>
+                              </select>
+                </td>
+            </tr>
+
+            <tr>
+                    <td><br>Online</td>
+                    <td>
+                       <br> <input type="radio" id="EmpChoice" name="option" value="Yes"> Yes 
+                        <input type="radio" id="EmpChoice" name="option" value="No"> No
+                    </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Add Employee" onclick="addemployee()"/> </td>
+            </tr>
+
+        </table>
+        </form>
+    </body>
+</html>
