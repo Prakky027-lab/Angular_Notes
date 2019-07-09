@@ -1,0 +1,53 @@
+<!--Employee Id is{{empId}} <br/>
+Employee Name is{{empName}}<br/>
+Employee Salary is{{empSalary}} <br/>-->
+
+<table>
+    <tr>
+        <td>Employee Id</td>
+        <td><input type="text" [(ngModel)]="empId"/></td>  <!--Event Binding because we jst want take value from html and not reflect it bck-->
+    </tr>
+    <tr>
+        <td>Employee Name</td>
+        <td><input type="text" [(ngModel)]="empName"/></td>
+    </tr>
+
+    <tr>
+        <td>Employee Salary</td>
+        <td><input type="text" [(ngModel)]="empSal"/></td>
+    </tr>
+
+    <tr>
+        <td>Employee Department</td>
+        <td><input type="text" [(ngModel)]="empDep"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="ADD Employee" (click)="addEmployee()"/></td>
+    </tr>
+</table>
+
+
+<br>
+
+
+<h2>Show all Employee</h2>
+<br>
+<table border="10">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee name</th>
+        <th>Employee salary</th>
+        <th>Employee department</th>
+    </tr>
+
+    <tr *ngFor="let data of empAll; let i=index">
+        <td>{{data.empId}}</td>
+        <td>{{data.empName}}</td>
+        <td>{{data.empSal}}</td>
+        <td>{{data.empDep}}</td>
+    </tr>
+</table>
+
+
+<BR>
+
