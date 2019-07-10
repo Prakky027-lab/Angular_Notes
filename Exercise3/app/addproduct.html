@@ -1,0 +1,67 @@
+<!---<form #empform=ngForm (ngSubmit)="addData()">  -->
+    <table>
+        <tr>
+            <td>Product Id</td>
+            <td><input type="text" name="id" id="eid" [(ngModel)]="prodId" #idcontrol="ngModel" required/></td>
+            <span *ngIf="idcontrol.touched && idcontrol.invalid">Id should be filled</span>
+        </tr>
+        <tr>
+            <td>Product Name</td>
+            <td><input type="text" name="name" id="ename" [(ngModel)]="prodName" #namecontrol="ngModel" required /></td>
+            <span *ngIf="namecontrol.touched && namecontrol.invalid">Name should be filled</span>
+        </tr>
+        <tr>
+            <td>Product Cost</td>
+            <td><input type="text" name="cost" id="ecost"[(ngModel)]="prodCost" #costcontrol="ngModel" required /></td>
+            <span *ngIf="salarycontrol.touched && salarycontrol.invalid">Cost should be filled</span>
+        </tr>
+
+        <tr>
+            <td>Product Online</td>
+            <td>
+               <br> <input type="radio" id="Choice" name="option" value="Yes"> Yes 
+                <input type="radio" id="Choice" name="option" value="No"> No
+            </td>
+        </tr>
+
+        <tr>
+            <td>Product Category</td>
+            <td>
+                    <select id="Select">
+                            <option value="Select">Grocery</option>
+                            <option value="Mobile">Mobile</option>
+                            <option value="Electronic">Electronic</option>
+                            <option value="Cloth">Cloth</option>
+                          </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Available In Store</td>
+            <td>
+                <br><input type="checkbox" id="store" name="storename" value="Big Bazar"> Big Bazar
+                <input type="checkbox" id="store" name="storename" value="DMart"> DMart
+                <input type="checkbox" id="store" name="storename" value="Reliance"> Reliance
+                <input type="checkbox" id="store" name="storename" value="Mega store"> Mega store
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="Add Product" onclick="addemployee()"/> </td>
+        </tr>
+        </table>
+
+        <table border="10">
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee name</th>
+                <th>Employee salary</th>
+                <th>Employee department</th>
+            </tr>
+        
+            <tr *ngFor="let data of empAll; let i=index">
+                <td>{{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.cost}}</td>
+            </tr>
+        </table>
